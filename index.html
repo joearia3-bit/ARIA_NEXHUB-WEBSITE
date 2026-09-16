@@ -1,40 +1,120 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ARIA Auto Report 20%</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-black text-white h-screen flex flex-col">
-<nav class="flex justify-between p-2 border-b border-zinc-800 bg-zinc-900 text-xs"><b><span class="text-green-400">ARIA_</span>NexHub 20%</b><div class="flex gap-1"><button onclick="openDash()" class="bg-yellow-400 text-black px-2 py-1 rounded-full font-bold animate-pulse">💰 K0 Earned</button><button onclick="v('p')" class="bg-white text-black px-2 py-1 rounded-full font-bold">Preview</button><button onclick="document.getElementById('m').classList.remove('hidden')" class="bg-green-500 text-black px-2 py-1 rounded-full font-bold">🚀 K100</button></div></nav>
-<div class="flex flex-1 overflow-hidden flex-col md:flex-row">
-<div class="w-full md:w-80 bg-zinc-900 border-r border-zinc-800 flex flex-col p-2 gap-2"><b class="text-xs">📊 20% + Auto Report</b><div id="chat" class="flex-1 bg-black rounded-xl p-2 text-[11px] overflow-y-auto h-28">Auto WhatsApp report ready!<br>🌐 K50 | 📱 K100 | 🏪 K100+20%<br><br><button onclick="q('Buai market')" class="bg-zinc-800 w-full p-2 rounded text-left">🌿 Buai</button><button onclick="openDash()" class="bg-yellow-400 text-black w-full p-2 rounded font-bold mt-2">💰 Earnings + Report</button></div><textarea id="p" placeholder="Build..." class="bg-black border border-zinc-700 rounded-xl p-2 text-xs h-16"></textarea><button onclick="build()" class="bg-green-500 text-black py-2 rounded-full font-bold text-xs">⚡ Build FREE</button></div>
-<div class="flex-1 flex flex-col bg-white"><div id="vp" class="flex-1 overflow-auto text-black p-4 text-center"><h1 class="font-black text-xl">🇵🇬 Auto WhatsApp Report Ready!</h1><p class="text-xs text-gray-500">Your 20% earnings auto-report to WhatsApp</p><button onclick="openDash()" class="mt-4 bg-yellow-400 text-black px-6 py-3 rounded-full text-xs font-black">📊 View Dashboard + Send Report</button></div><textarea id="vc" class="hidden flex-1 bg-black text-green-400 p-3 text-xs"></textarea></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARIA_NexHub - PNG's First App Store</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body{font-family:system-ui;background:#000;color:#fff}
+.gold{color:#D4AF37}
+.bg-gold{background:#D4AF37}
+.border-gold{border-color:#D4AF37}
+</style>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header class="border-b border-zinc-800 p-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gold text-black flex items-center justify-center font-bold text-xl">A</div>
+<span class="text-gold font-bold text-xl">ARIA_NexHub</span>
+</div>
+<div class="text-xs text-zinc-400">PNG's FIRST APP STORE — LIVE NOW!</div>
+</header>
+
+<!-- HERO -->
+<div class="p-6 text-center">
+<h1 class="text-4xl font-bold gold">ARIA_NexHub</h1>
+<p class="text-zinc-300 mt-2">Built in PNG for PNG</p>
+<div class="mt-4 inline-block bg-zinc-900 border border-gold px-4 py-2 rounded">
+I Build Phone App For You • <span class="gold font-bold">K60 Only!</span>
+</div>
+<div class="mt-6 grid grid-cols-3 gap-2 text-xs">
+<div class="bg-black border border-zinc-700 p-3 rounded-xl">✅<br>80% You Keep<br>20% Fee</div>
+<div class="bg-black border border-zinc-700 p-3 rounded-xl">🛍️<br>Trade Store App<br>Buai Market App</div>
+<div class="bg-black border border-zinc-700 p-3 rounded-xl">📱<br>Customers Buy<br>On Phone</div>
+</div>
+<p class="mt-4 text-sm text-zinc-400">✅ First K60 Withdrawal Approved</p>
+<button onclick="document.getElementById('dash').classList.remove('hidden')" class="mt-6 w-full bg-gold text-black font-bold py-3 rounded-xl">OPEN DASHBOARD</button>
 </div>
 
-<!-- DASHBOARD WITH AUTO WHATSAPP REPORT -->
-<div id="dash" class="hidden fixed inset-0 bg-black/95 flex items-center justify-center p-3 z-[60] overflow-y-auto"><div class="bg-zinc-900 border-2 border-yellow-400 rounded-2xl p-4 max-w-lg w-full my-4"><div class="flex justify-between items-center"><h3 class="font-black text-yellow-400 text-sm">💰 20% Earnings + Auto Report</h3><button onclick="document.getElementById('dash').classList.add('hidden')" class="bg-zinc-800 px-2 py-1 rounded-full text-xs">✕</button></div>
+<!-- DASHBOARD - HIDDEN -->
+<div id="dash" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center p-4 z-50 overflow-y-auto">
+<div class="bg-zinc-900 border border-zinc-700 w-full max-w-md rounded-2xl p-4">
 
-<div class="grid grid-cols-3 gap-2 mt-3 text-center"><div class="bg-black border border-zinc-700 p-3 rounded-xl"><div class="text-xl font-black" id="dApps">0</div><div class="text-[9px] text-gray-400">APPS</div></div><div class="bg-green-500 text-black p-3 rounded-xl"><div class="text-xl font-black" id="dEarn">K0</div><div class="text-[9px] font-bold">YOUR 20%</div></div><div class="bg-yellow-400 text-black p-3 rounded-xl"><div class="text-xl font-black" id="dSales">K0</div><div class="text-[9px] font-bold">TOTAL SALES</div></div></div>
+<div class="flex justify-between items-center mb-4">
+<h2 class="font-bold">DASHBOARD</h2>
+<button onclick="document.getElementById('dash').classList.add('hidden')" class="text-zinc-400">X</button>
+</div>
 
-<div class="mt-3 bg-black rounded-xl p-2 text-xs"><div class="flex justify-between"><b>📈 Your Apps:</b><button onclick="addDemo()" class="text-[9px] bg-zinc-800 px-2 py-1 rounded">+ Demo App</button></div><div id="appList" class="mt-2 space-y-1 max-h-32 overflow-y-auto text-[11px]"></div></div>
+<div class="grid grid-cols-3 gap-3 text-center mb-4">
+<div class="bg-black border border-zinc-700 p-3 rounded-xl">
+<div id="a1" class="font-bold text-xl">0</div>
+<div class="text-[10px] text-zinc-400">Total Apps</div>
+</div>
+<div class="bg-black border border-zinc-700 p-3 rounded-xl">
+<div id="a2" class="font-bold text-xl">K0</div>
+<div class="text-[10px] text-zinc-400">Total Sales</div>
+</div>
+<div class="bg-black border border-zinc-700 p-3 rounded-xl">
+<div id="a3" class="font-bold text-xl">K0</div>
+<div class="text-[10px] text-zinc-400">My Earnings</div>
+</div>
+</div>
 
-<div class="mt-3 bg-zinc-800 rounded-xl p-2 flex gap-2"><input id="saleInput" placeholder="Sale amount K" type="number" class="flex-1 bg-black border border-zinc-700 p-2 rounded-xl text-xs"><button onclick="addSale()" class="bg-green-500 text-black px-4 py-2 rounded-xl text-xs font-bold">+ Add Sale 20%</button></div>
+<div class="bg-black rounded-xl p-3 text-xs mb-3">
+<div class="flex justify-between"><span>Your Apps:</span><button onclick="addDemo()" class="bg-gold text-black px-2 rounded">+ Add Demo App</button></div>
+<div id="list" class="mt-2 text-zinc-400">No apps yet. Add demo.</div>
+</div>
 
-<!-- AUTO WHATSAPP REPORT -->
-<div class="mt-3 bg-green-900/40 border-2 border-green-500 rounded-xl p-3"><b class="text-green-400 text-xs">📱 AUTO WHATSAPP MONTHLY REPORT</b><div id="reportPreview" class="bg-black rounded-xl p-2 mt-2 text-[10px] whitespace-pre-wrap max-h-32 overflow-y-auto">No data yet - Publish app first</div><div class="grid grid-cols-2 gap-2 mt-2"><button onclick="sendReport()" class="bg-green-500 text-black py-3 rounded-full font-black text-xs">📤 Send Report to WhatsApp</button><button onclick="sendMonthlyReminder()" class="bg-yellow-400 text-black py-3 rounded-full font-black text-xs">📅 Monthly Auto-Reminder</button></div><p class="text-[9px] text-gray-400 mt-1">Report includes: Total apps, Your 20% earnings, Each app sales, BSP account for collection</p></div>
+<input id="saleInput" placeholder="Sale amount K" type="number" class="w-full bg-zinc-800 p-2 rounded-xl mb-2">
+<button onclick="addSale()" class="w-full bg-green-900/40 border border-green-500 p-3 rounded-xl text-green-400 text-xs">✅ AUTO WHATSAPP REPORT</button>
 
-<button onclick="document.getElementById('dash').classList.add('hidden')" class="w-full mt-3 bg-zinc-800 py-2 rounded-full text-xs">Close</button></div></div>
+<button onclick="openReport()" class="w-full mt-3 bg-zinc-800 py-2 rounded-xl text-xs">📊 View Auto Reports: No data. Open WhatsApp</button>
 
-<!-- PUBLISH -->
-<div id="m" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center p-4 z-50"><div class="bg-zinc-900 border border-green-500/50 rounded-2xl p-4 max-w-md w-full"><h3 class="font-black text-sm">🚀 K100 + 20% Contract</h3><div class="grid grid-cols-3 gap-2 mt-2 text-xs text-center"><div onclick="s('web','K50')" id="o-web" class="border border-zinc-700 p-2 rounded-xl cursor-pointer">🌐 K50</div><div onclick="s('apk','K100')" id="o-apk" class="border border-zinc-700 p-2 rounded-xl cursor-pointer">📱 K100</div><div onclick="s('store','K100')" id="o-store" class="border-2 border-green-500 bg-green-500/10 p-2 rounded-xl cursor-pointer"><b>🏪 K100 20%</b></div></div><div class="flex gap-2 mt-2"><input type="checkbox" id="agree"><label for="agree" class="text-[10px]">I AGREE to 20% lifetime</label></div><div class="bg-black border border-zinc-700 p-2 rounded-xl text-xs mt-2">BSP <b>0000854484</b> | <b id="pt" class="text-green-400">PLAYSTORE K100 + 20%</b></div><input id="an" placeholder="App Name" class="w-full bg-black border border-zinc-700 p-2 rounded-xl text-xs mt-2"><input id="ph" placeholder="WhatsApp" class="w-full bg-black border border-zinc-700 p-2 rounded-xl text-xs mt-1"><button onclick="pub()" class="bg-green-500 text-black w-full py-3 rounded-full font-black mt-2 text-xs">✅ AGREE & PAID <span id="pa">K100</span></button><button onclick="downloadAPK()" class="w-full mt-2 bg-white text-black py-2 rounded-full text-xs font-bold">📥 APK</button><button onclick="document.getElementById('m').classList.add('hidden')" class="w-full text-xs text-gray-500 mt-2">Close</button></div></div>
+<div class="mt-4 border-t border-zinc-800 pt-3 text-center">
+<p class="text-[10px] text-zinc-500">Contact Support Team: 7743 2661</p>
+<p class="text-[10px] text-zinc-500 mt-1">Visit: joearia3-bit.github.io/ARIA_NEXHUB-WEBSITE</p>
+</div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="mt-auto border-t border-zinc-900 p-4 text-center text-[10px] text-zinc-500">
+PROFESSIONAL • SECURE • BUILT LOCALLY IN PAPUA NEW GUINEA<br>
+© 2026 ARIA_NexHub PNG
+</footer>
+
 <script>
-let pl='store',pr='K100',idea='',apps=JSON.parse(localStorage.getItem('aria_apps')||'[]');const $=id=>document.getElementById(id);
-function v(t){$('vp').classList.toggle('hidden',t!='p');$('vc').classList.toggle('hidden',t!='c');if(t=='p')$('vp').innerHTML='<iframe style="width:100%;height:100%;border:none" srcdoc="'+$('vc').value.replace(/"/g,'&quot;')+'"></iframe>';}
-function q(t){$('p').value=t;build();}
-function build(){idea=$('p').value;if(!idea)return;const h=`<div style="font-family:sans-serif;padding:20px;text-align:center;background:#000;color:#fff;min-height:100vh"><h1>🇵🇬 ${idea.slice(0,25)}</h1><p>${idea}</p><div style="background:#111;padding:20px;border-radius:15px;margin:20px"><h3>80/20 - 20% ARIA</h3><button style="background:#22c55e;color:#000;padding:12px 24px;border-radius:25px;font-weight:bold">Buy K10</button></div></div>`;$('vc').value=h;v('p');$('chat').innerHTML+=`<div class="bg-green-500 text-black p-1 rounded mt-1 text-[10px]">Built: ${idea}</div>`;$('p').value='';}
-function s(a,b){pl=a;pr=b;document.querySelectorAll('[id^=o-]').forEach(e=>e.className='border border-zinc-700 p-2 rounded-xl cursor-pointer text-center');$('o-'+a).className='border-2 border-green-500 bg-green-500/10 p-2 rounded-xl cursor-pointer text-center';$('pt').innerText=a.toUpperCase()+' '+b+' + 20%';$('pa').innerText=b;}
-function downloadAPK(){let n=$('an').value||'ARIA-App';let blob=new Blob([$('vc').value],{type:'text/html'});let a=document.createElement('a');a.href=url=URL.createObjectURL(blob);a.download=n.replace(/\s+/g,'-')+'.apk';a.click();}
-function pub(){if(!$('agree').checked)return alert('Tick AGREE');let n=$('an').value,ph=$('ph').value;if(!n||!ph)return alert('Enter name & phone');let app={name:n,phone:ph,plan:pl,price:pr,sales:0,my20:0,date:new Date().toLocaleDateString()};apps.push(app);localStorage.setItem('aria_apps',JSON.stringify(apps));updateDash();let msg=`🚀 K100 20% SIGNED ✅ App:${n} Phone:${ph} Agree 20%`;window.open('https://wa.me/67577432661?text='+encodeURIComponent(msg));downloadAPK();alert('✅ Added to dashboard!');$('m').classList.add('hidden');}
-function updateDash(){let total=apps.length,totalSales=apps.reduce((s,a)=>s+a.sales,0),myEarn=apps.reduce((s,a)=>s+a.my20,0);$('dApps').innerText=total;$('dEarn').innerText='K'+myEarn;$('dSales').innerText='K'+totalSales;document.querySelector('nav button').innerText=`💰 K${myEarn} Earned`;let list=$('appList');if(total==0)list.innerHTML='<div class="text-gray-500 text-center py-2">No apps yet<br><button onclick="addDemo()" class="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs mt-1">+ Add Demo to Test</button></div>';else list.innerHTML=apps.map((a,i)=>`<div class="flex justify-between bg-zinc-800 p-2 rounded"><span>${i+1}. ${a.name} - Sales K${a.sales}</span><span class="text-green-400 font-bold">You K${a.my20}</span></div>`).join('');let report=`💰 ARIA_NexHub MONTHLY 20% REPORT\n📅 ${new Date().toLocaleDateString()}\n👤 Joseph Aria BSP 0000854484\n\n📊 SUMMARY:\nTotal Apps: ${total}\nTotal Sales: K${totalSales}\nYOUR 20%: K${myEarn}\nCreator 80%: K${totalSales-myEarn}\n\n📱 APP BREAKDOWN:\n${apps.map(a=>`• ${a.name}: Sales K${a.sales} → You K${a.my20} (20%)`).join('\n')||'No apps yet'}\n\n💸 COLLECTION:\nAll 20% fees to BSP 0000854484 Waigani 202\nNext report: ${new Date(new Date().setMonth(new Date().getMonth()+1)).toLocaleDateString()}\n\n🇵🇬 PNG App Empire - ARIA_NexHub`; $('reportPreview').innerText=report; localStorage.setItem('aria_report',report);}
-function addSale(){let amt=parseInt($('saleInput').value)||0;if(amt<=0)return alert('Enter amount');if(apps.length==0){apps.push({name:'Demo App',phone:'675',plan:'store',price:'K100',sales:0,my20:0,date:new Date().toLocaleDateString()});}let last=apps[apps.length-1];last.sales+=amt;last.my20+=Math.floor(amt*0.2);localStorage.setItem('aria_apps',JSON.stringify(apps));updateDash();$('saleInput').value='';}
-function addDemo(){apps.push({name:'Buai Market '+(apps.length+1),phone:'6757',plan:'store',price:'K100',sales:150,my20:30,date:new Date().toLocaleDateString()});localStorage.setItem('aria_apps',JSON.stringify(apps));updateDash();}
-function sendReport(){let r=localStorage.getItem('aria_report')||'No data';window.open('https://wa.me/67577432661?text='+encodeURIComponent(r));alert('📤 Monthly 20% report sent to your WhatsApp! Save it!');}
-function sendMonthlyReminder(){let r=`📅 MONTHLY REMINDER SET!\n\n💰 Your 20% Auto-Report:\n${localStorage.getItem('aria_report')||'No data yet'}\n\n🔔 I will remind you every 30 days to collect your 20%!\nSet phone reminder: ${new Date(new Date().setDate(new Date().getDate()+30)).toLocaleDateString()}`;window.open('https://wa.me/67577432661?text='+encodeURIComponent(r));alert('📅 Monthly reminder set! Check dashboard in 30 days to collect 20%!');}
-function openDash(){updateDash();$('dash').classList.remove('hidden');}
-updateDash();s('store','K100');
-</script></body></html>
+let apps = JSON.parse(localStorage.getItem('aria_apps')||'[]');
+let sales = JSON.parse(localStorage.getItem('aria_sales')||'[]');
+
+function updateDash(){
+document.getElementById('a1').innerText = apps.length;
+document.getElementById('a2').innerText = 'K'+sales.reduce((s,a)=>s+a,0);
+document.getElementById('a3').innerText = 'K'+Math.floor(sales.reduce((s,a)=>s+a,0)*0.8);
+let l=document.getElementById('list');
+if(apps.length==0){l.innerText='No apps yet. Add demo.'}else{l.innerHTML=apps.map((a,i)=>`<div class='flex justify-between bg-zinc-900 p-2 rounded mt-1'><span>${a}</span><button onclick='apps.splice(${i},1);save()'>X</button></div>`).join('')}
+}
+function save(){localStorage.setItem('aria_apps',JSON.stringify(apps));localStorage.setItem('aria_sales',JSON.stringify(sales));updateDash()}
+function addDemo(){
+let n=prompt('App name? e.g. Moms Trade Store');
+if(n){apps.push(n);save()}
+}
+function addSale(){
+let v=parseInt(document.getElementById('saleInput').value);
+if(!v){alert('Enter sale amount');return}
+sales.push(v);save();document.getElementById('saleInput').value='';
+let msg=`*ARIA_NexHub Auto Report*%0AApp Sale: K${v}%0ATotal Sales: K${sales.reduce((s,a)=>s+a,0)}%0A80% Yours: K${Math.floor(sales.reduce((s,a)=>s+a,0)*0.8)}%0A%0AVisit: joearia3-bit.github.io/ARIA_NEXHUB-WEBSITE`;
+window.open('https://wa.me/67577432661?text='+msg,'_blank');
+}
+function openReport(){
+let data=localStorage.getItem('aria_report')||'No data';
+window.open('https://wa.me/67577432661?text=My Auto Report: '+data,'_blank');
+}
+updateDash();
+</script>
+</body>
+</html>
