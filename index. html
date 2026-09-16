@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ARIA_NexHub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;background:#0a0a0a;color:white;font-family:Arial;text-align:center}
+.nav{padding:20px;text-align:left;border-bottom:1px solid #222}
+.logo{color:#00ff88;font-weight:bold}
+.hero{padding:60px 20px}
+.btn{background:#00ff88;color:black;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:20px}
+.card{background:#151515;padding:20px;margin:15px;border-radius:10px;border:1px solid #222}
+</style>
+</head>
+<body>
+<div class="nav"><div class="logo">ARIA_NexHub</div></div>
+<div class="hero">
+<h1>The Next Hub for<br>AI & Automation</h1>
+<p style="color:#888">Built in Port Moresby, PNG</p>
+<a class="btn" href="#">Launch App</a>
+</div>
+<div class="card"><h3 style="color:#00ff88">AI Tools</h3><p>All AI tools in one place</p></div>
+<div class="card"><h3 style="color:#00ff88">Fast</h3><p>Works on mobile and low data</p></div>
+<div class="card"><h3 style="color:#00ff88">Automation</h3><p>Automate your work</p></div>
+<p style="color:#555;margin-top:50px">© 2026 ARIA_NexHub</p>
+</body>
+</html>
