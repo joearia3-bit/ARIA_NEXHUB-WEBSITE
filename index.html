@@ -1,106 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARIA_NexHub - Lovable + Code Editor + Playstore</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>::-webkit-scrollbar{width:4px;height:4px}::-webkit-scrollbar-thumb{background:#22c55e;border-radius:10px}.chat{height:45vh;overflow-y:auto}.editor{font-family:'Courier New',monospace;tab-size:2;}.glow{box-shadow:0 0 25px rgba(34,197,94,0.4)}</style>
-</head>
-<body class="bg-[#0a0a0a] text-white flex flex-col h-screen">
-<nav class="flex justify-between items-center p-2 border-b border-[#222] bg-[#111] text-xs">
-<div class="flex items-center gap-2"><div class="w-6 h-6 bg-green-500 rounded flex items-center justify-center font-black text-black">A</div><b>ARIA_NexHub</b><span class="bg-green-500/20 text-green-400 px-2 py-0.5 rounded-full text-[9px]">LOVABLE+EDITOR+STORE</span></div>
-<div class="flex gap-1"><button onclick="switchTab('preview')" id="tab-preview" class="bg-white text-black px-3 py-1 rounded-full font-bold">👁️ Preview</button><button onclick="switchTab('code')" id="tab-code" class="bg-[#222] px-3 py-1 rounded-full">💻 Code</button><button onclick="document.getElementById('payModal').classList.remove('hidden')" class="bg-green-500 text-black px-3 py-1 rounded-full font-bold">🚀 Publish</button></div>
-</nav>
-<div class="flex flex-1 overflow-hidden flex-col lg:flex-row">
-<div class="w-full lg:w-[350px] border-r border-[#222] bg-[#111] flex flex-col">
-<div class="p-2 border-b border-[#222] flex justify-between text-[11px]"><b>🤖 AI Builder</b><span class="text-green-400">FREE BUILD</span></div>
-<div id="chatBox" class="chat p-2 space-y-2 flex-1 text-[11px]">
-<div class="bg-[#222] p-2 rounded-xl"><b class="text-green-400">ARIA AI:</b> I build apps like Lovable + edit code like Cursor! Tell me what to build.</div>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ARIA BSP Auto-Collect 20%</title><script src="https://cdn.tailwindcss.com"></script></head>
+<body class="bg-black text-white h-screen flex flex-col">
+<nav class="flex justify-between p-2 border-b border-zinc-800 bg-zinc-900 text-xs"><b><span class="text-green-400">ARIA_</span>NexHub BSP</b><div class="flex gap-1"><button onclick="openDash()" class="bg-yellow-400 text-black px-3 py-1 rounded-full font-bold animate-pulse" id="earnBtn">💰 K0</button><button onclick="v('p')" class="bg-white text-black px-2 py-1 rounded-full font-bold">Preview</button><button onclick="document.getElementById('m').classList.remove('hidden')" class="bg-green-500 text-black px-3 py-1 rounded-full font-bold">🚀 K100</button></div></nav>
+<div class="flex flex-1 overflow-hidden flex-col md:flex-row">
+<div class="w-full md:w-80 bg-zinc-900 border-r border-zinc-800 flex flex-col p-2 gap-2"><b class="text-xs">💸 BSP Auto-Collect 20%</b><div id="chat" class="flex-1 bg-black rounded-xl p-2 text-[11px] overflow-y-auto h-28">BSP 0000854484 auto-collect ready!<br>🌐 K50 | 📱 K100 | 🏪 K100+20%<br><br><button onclick="openDash()" class="bg-yellow-400 text-black w-full p-2 rounded font-bold">💰 Dashboard + BSP Collect</button></div><textarea id="p" placeholder="Build app..." class="bg-black border border-zinc-700 rounded-xl p-2 text-xs h-16"></textarea><button onclick="build()" class="bg-green-500 text-black py-2 rounded-full font-bold text-xs">⚡ Build FREE</button></div>
+<div class="flex-1 flex flex-col bg-white"><div id="vp" class="flex-1 overflow-auto text-black p-4 text-center"><h1 class="font-black text-xl">🇵🇬 BSP Auto-Collect Enabled!</h1><p class="text-xs text-gray-500">Your 20% auto-collect via BSP</p><div class="mt-4 bg-black text-white p-4 rounded-xl text-xs text-left"><b class="text-yellow-400">🏦 BSP COLLECTION METHOD:</b><br>• BSP Account: 0000854484 Joseph Aria<br>• Waigani 202 Branch<br>• All 20% fees auto-tracked<br>• Monthly WhatsApp invoice with BSP link</div><button onclick="openDash()" class="mt-4 bg-green-500 text-black px-6 py-3 rounded-full font-black text-xs">💰 Open Dashboard + Collect BSP</button></div><textarea id="vc" class="hidden flex-1 bg-black text-green-400 p-3 text-xs"></textarea></div>
 </div>
-<div class="p-2 border-t border-[#222]">
-<textarea id="userPrompt" placeholder="Build buai delivery app..." class="w-full bg-black border border-[#333] rounded-xl p-2 text-[11px] h-12 resize-none"></textarea>
-<div class="flex gap-1 mt-1"><button onclick="buildLovable()" class="flex-1 bg-green-500 text-black py-2 rounded-full font-bold text-[11px]">⚡ Build FREE</button><button onclick="aiFixCode()" class="bg-[#222] px-3 py-2 rounded-full text-[11px]">🤖 Fix Code</button></div>
+
+<!-- DASHBOARD WITH BSP AUTO-COLLECT -->
+<div id="dash" class="hidden fixed inset-0 bg-black/95 flex items-center justify-center p-3 z-[60] overflow-y-auto"><div class="bg-zinc-900 border-2 border-yellow-400 rounded-2xl p-4 max-w-lg w-full my-4"><div class="flex justify-between"><h3 class="font-black text-yellow-400 text-sm">💰 20% + BSP Auto-Collect</h3><button onclick="document.getElementById('dash').classList.add('hidden')" class="bg-zinc-800 px-2 py-1 rounded-full text-xs">✕</button></div>
+<div class="grid grid-cols-3 gap-2 mt-3 text-center"><div class="bg-black border border-zinc-700 p-3 rounded-xl"><div class="text-xl font-black" id="dApps">0</div><div class="text-[9px] text-gray-400">APPS</div></div><div class="bg-green-500 text-black p-3 rounded-xl"><div class="text-xl font-black" id="dEarn">K0</div><div class="text-[9px] font-bold">YOUR 20% - BSP</div></div><div class="bg-yellow-400 text-black p-3 rounded-xl"><div class="text-xl font-black" id="dSales">K0</div><div class="text-[9px] font-bold">TOTAL</div></div></div>
+<div class="mt-3 bg-black rounded-xl p-2 text-xs"><b>📈 Apps - 20% BSP:</b><div id="appList" class="mt-2 space-y-1 max-h-24 overflow-y-auto text-[11px]"></div></div>
+<div class="mt-2 flex gap-2"><input id="saleInput" placeholder="Sale K" type="number" class="flex-1 bg-black border border-zinc-700 p-2 rounded-xl text-xs"><button onclick="addSale()" class="bg-green-500 text-black px-3 py-2 rounded-xl text-xs font-bold">+ Sale</button><button onclick="addDemo()" class="bg-zinc-800 px-3 py-2 rounded-xl text-xs">Demo</button></div>
+
+<!-- BSP AUTO-COLLECT REPORT -->
+<div class="mt-3 bg-green-900/30 border-2 border-green-500 rounded-xl p-3"><b class="text-green-400 text-xs">🏦 BSP AUTO-COLLECT REPORT - 20%</b><div id="reportPreview" class="bg-black rounded-xl p-2 mt-2 text-[10px] whitespace-pre-wrap max-h-28 overflow-y-auto"></div>
+<div class="grid grid-cols-1 gap-2 mt-2">
+<button onclick="sendReport()" class="bg-green-500 text-black py-3 rounded-full font-black text-xs">📤 Send BSP Report to WhatsApp</button>
+<button onclick="collectBSP()" class="bg-yellow-400 text-black py-3 rounded-full font-black text-xs">🏦 Generate BSP Collection Invoice</button>
+<button onclick="sendBSPRequest()" class="bg-white text-black py-3 rounded-full font-black text-xs">💸 Send BSP Pay Request to Creators</button>
 </div>
+<div class="mt-2 bg-black p-2 rounded-xl text-[9px] text-gray-400">BSP Account: 0000854484 | Name: Joseph Aria | Branch: Waigani 202 | All 20% auto-collected via WhatsApp invoice</div>
 </div>
-<div class="flex-1 flex flex-col bg-black overflow-hidden">
-<div id="view-preview" class="flex-1 flex flex-col">
-<div class="flex justify-between p-2 bg-[#111] border-b border-[#222] text-[10px]"><span>🌐 Live Preview - FREE</span><span class="text-yellow-400">PREVIEW MODE - Pay to Publish</span></div>
-<div id="preview" class="flex-1 bg-white text-black overflow-auto">
-<div class="h-full flex flex-col items-center justify-center p-4 text-center">
-<p class="text-2xl">🇵🇬✨💻</p><b class="text-sm mt-2">Lovable + Code Editor + Playstore</b>
-<p class="text-[11px] text-gray-500 mt-1">Build FREE, Edit Code with AI, Publish to Web/APK/Playstore</p>
-<div class="mt-3 grid grid-cols-1 gap-1 w-full max-w-xs text-[11px]">
-<button onclick="quickBuild('Buai delivery app Pom with WhatsApp order')" class="bg-gray-100 p-2 rounded-xl text-left">🌿 Buai Market App → Code + APK</button>
-<button onclick="quickBuild('Trade store POS system')" class="bg-gray-100 p-2 rounded-xl text-left">🛒 POS → Editor + Web + Store</button>
-<button onclick="quickBuild('PMV booking app')" class="bg-gray-100 p-2 rounded-xl text-left">🚌 PMV → Full code + Publish</button>
-</div>
-</div>
-</div>
-</div>
-<div id="view-code" class="hidden flex-1 flex flex-col bg-[#0f0f0f]">
-<div class="flex justify-between items-center p-2 bg-[#111] border-b border-[#222] text-[10px]">
-<div class="flex gap-2"><span class="bg-[#222] px-2 py-1 rounded">📄 index.html</span><span class="bg-[#222] px-2 py-1 rounded">🎨 style.css</span><span class="bg-[#222] px-2 py-1 rounded">⚙️ app.js</span></div>
-<div class="flex gap-1"><button onclick="runCode()" class="bg-green-500 text-black px-3 py-1 rounded-full font-bold">▶ Run</button><button onclick="copyCode()" class="bg-[#222] px-2 py-1 rounded-full">Copy</button></div>
-</div>
-<div class="p-2 bg-[#111] border-b border-[#222] flex gap-1">
-<input id="codePrompt" placeholder="Ask AI to edit code: e.g. Make button green, add cart..." class="flex-1 bg-black border border-[#333] rounded-full px-3 py-1.5 text-[11px]">
-<button onclick="aiEditCode()" class="bg-white text-black px-3 py-1.5 rounded-full font-bold text-[11px]">🤖 Edit Code</button>
-</div>
-<textarea id="codeEditor" class="editor flex-1 w-full bg-[#0a0a0a] text-green-300 p-4 text-[12px] outline-none resize-none" spellcheck="false"><!DOCTYPE html>
-<html>
-<head>
-<title>My PNG App - Built with ARIA_NexHub</title>
-<style>
-body { font-family: sans-serif; padding: 20px; background: #000; color: #fff; text-align: center; }
-.btn { background: #22c55e; color: #000; padding: 10px 20px; border-radius: 20px; font-weight: bold; border: none; }
-.card { background: #111; border: 1px solid #333; padding: 20px; border-radius: 15px; margin: 10px; }
-</style>
-</head>
-<body>
-<h1>🇵🇬 My PNG App</h1>
-<p>Built FREE with ARIA_NexHub - Lovable for PNG</p>
-<div class="card">
-<h3>Welcome! Edit this code with AI</h3>
-<p>Use AI Editor: "Add WhatsApp button" or "Make it buai shop"</p>
-<button class="btn" onclick="alert('Pay K50 to publish LIVE!')">🚀 Preview - Pay K50 to Launch</button>
-</div>
+<button onclick="document.getElementById('dash').classList.add('hidden')" class="w-full mt-3 bg-zinc-800 py-2 rounded-full text-xs">Close Dashboard</button></div></div>
+
+<!-- PUBLISH -->
+<div id="m" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center p-4 z-50"><div class="bg-zinc-900 border border-green-500/50 rounded-2xl p-4 max-w-md w-full"><h3 class="font-black text-sm">🚀 K100 + 20% + BSP Collect</h3><div class="grid grid-cols-3 gap-2 mt-2 text-xs text-center"><div onclick="s('web','K50')" id="o-web" class="border border-zinc-700 p-2 rounded-xl cursor-pointer">🌐 K50</div><div onclick="s('apk','K100')" id="o-apk" class="border border-zinc-700 p-2 rounded-xl cursor-pointer">📱 K100</div><div onclick="s('store','K100')" id="o-store" class="border-2 border-green-500 bg-green-500/10 p-2 rounded-xl cursor-pointer"><b>🏪 K100 20%</b></div></div><div class="flex gap-2 mt-2"><input type="checkbox" id="agree"><label for="agree" class="text-[10px]">I AGREE 20% to BSP 0000854484</label></div><div class="bg-black border border-zinc-700 p-2 rounded-xl text-xs mt-2">BSP <b>0000854484</b> Waigani 202 | <b id="pt" class="text-green-400">K100 + 20% BSP Auto</b></div><input id="an" placeholder="App Name" class="w-full bg-black border border-zinc-700 p-2 rounded-xl text-xs mt-2"><input id="ph" placeholder="WhatsApp" class="w-full bg-black border border-zinc-700 p-2 rounded-xl text-xs mt-1"><button onclick="pub()" class="bg-green-500 text-black w-full py-3 rounded-full font-black mt-2 text-xs">✅ AGREE 20% BSP & PAID <span id="pa">K100</span></button><button onclick="downloadAPK()" class="w-full mt-2 bg-white text-black py-2 rounded-full text-xs font-bold">📥 APK</button><button onclick="document.getElementById('m').classList.add('hidden')" class="w-full text-xs text-gray-500 mt-2">Close</button></div></div>
 <script>
-// Your app logic - AI can edit this!
-console.log("ARIA_NexHub - Build FREE, Publish K50-K200");
-function orderNow(){ alert("Order via WhatsApp 77432661 - Publish to get live!"); }
-</script>
-</body>
-</html></textarea>
-</div>
-</div>
-</div>
-<div id="payModal" class="hidden fixed inset-0 bg-black/85 flex items-center justify-center p-3 z-50 overflow-y-auto">
-<div class="bg-[#111] border border-green-500/50 rounded-2xl p-4 max-w-md w-full glow">
-<h3 class="font-black">🚀 Publish - Web / APK / Playstore</h3>
-<div class="grid grid-cols-3 gap-2 mt-3 text-[10px]">
-<div onclick="selectPlan('web')" id="plan-web" class="border-2 border-green-500 bg-green-500/10 p-2 rounded-xl cursor-pointer text-center"><b>🌐 Web</b><br><b class="text-green-400">K50</b><br>Live link</div>
-<div onclick="selectPlan('apk')" id="plan-apk" class="border border-[#333] p-2 rounded-xl cursor-pointer text-center"><b>📱 APK</b><br><b>K100</b><br>Install file</div>
-<div onclick="selectPlan('playstore')" id="plan-playstore" class="border border-[#333] p-2 rounded-xl cursor-pointer text-center"><b>🏪 Store</b><br><b>K200</b><br>Full publish help</div>
-</div>
-<div class="bg-black border border-[#333] p-2 rounded-xl text-[11px] mt-3">BSP <b>0000854484</b> Joseph Aria | <span id="selectedText" class="text-green-400">WEB K50</span></div>
-<input id="projName" placeholder="App Name" class="w-full bg-black border border-[#333] p-2 rounded-xl text-xs mt-2">
-<input id="phone" placeholder="WhatsApp" class="w-full bg-black border border-[#333] p-2 rounded-xl text-xs mt-1">
-<button onclick="publishApp()" class="bg-green-500 text-black w-full py-3 rounded-full font-black text-xs mt-3">💰 I PAID <span id="payAmount">K50</span> - PUBLISH</button>
-<button onclick="document.getElementById('payModal').classList.add('hidden')" class="w-full mt-2 text-[10px] text-gray-500">Continue editing free</button>
-</div>
-</div>
-<script>
-let currentPlan='web',currentProject='',priceMap={web:'K50',apk:'K100',playstore:'K200'};
-function switchTab(t){document.getElementById('view-preview').classList.toggle('hidden',t!=='preview');document.getElementById('view-code').classList.toggle('hidden',t!=='code');document.getElementById('tab-preview').className=t==='preview'?'bg-white text-black px-3 py-1 rounded-full font-bold':'bg-[#222] px-3 py-1 rounded-full';document.getElementById('tab-code').className=t==='code'?'bg-white text-black px-3 py-1 rounded-full font-bold':'bg-[#222] px-3 py-1 rounded-full';}
-function selectPlan(p){currentPlan=p;document.querySelectorAll('[id^=plan-]').forEach(e=>e.className='border border-[#333] p-2 rounded-xl cursor-pointer text-center');document.getElementById('plan-'+p).className='border-2 border-green-500 bg-green-500/10 p-2 rounded-xl cursor-pointer text-center';document.getElementById('selectedText').innerText=p.toUpperCase()+' '+priceMap[p];document.getElementById('payAmount').innerText=priceMap[p];}
-function quickBuild(t){document.getElementById('userPrompt').value=t;buildLovable();}
-function buildLovable(){let input=document.getElementById('userPrompt').value;if(!input)return;currentProject=input;let chat=document.getElementById('chatBox');chat.innerHTML+=`<div class="bg-green-500 text-black p-2 rounded-xl ml-4"><b>You:</b> ${input}</div>`;chat.innerHTML+=`<div class="bg-[#222] p-2 rounded-xl"><b class="text-green-400">ARIA:</b> Building + coding... ✓</div>`;chat.scrollTop=chat.scrollHeight;let code=`<!DOCTYPE html><html><head><title>${input.substring(0,25)} - PNG</title><style>body{font-family:sans-serif;background:#000;color:#fff;text-align:center;padding:20px}.card{background:#111;border:1px solid #333;padding:20px;border-radius:15px;margin:10px}.btn{background:#22c55e;color:#000;padding:12px 24px;border-radius:25px;font-weight:bold;border:none;cursor:pointer}</style></head><body><h1>🇵🇬 ${input.split(' ').slice(0,4).join(' ')} </h1><p>${input}</p><div class="card"><h3>✅ Built FREE with ARIA</h3><p>Code editable in 💻 Code tab</p><button class="btn" onclick="alert('Pay K50-K200 to publish to Web/APK/Playstore!')">🚀 Publish K50-K200</button></div><div class="card"><p>📱 Ready for APK & Playstore</p><p>🌐 Ready for Web</p></div><script>console.log("Built with ARIA_NexHub");function order(){alert("WhatsApp 77432661")}<\/script></body></html>`;document.getElementById('codeEditor').value=code;runCode();switchTab('preview');document.getElementById('userPrompt').value='';}
-function runCode(){let code=document.getElementById('codeEditor').value;document.getElementById('preview').innerHTML=`<iframe style="width:100%;height:100%;border:none;background:white" srcdoc="${code.replace(/"/g,'&quot;')}"></iframe>`;}
-function copyCode(){navigator.clipboard.writeText(document.getElementById('codeEditor').value);alert('✅ Code copied!');}
-function aiEditCode(){let prompt=document.getElementById('codePrompt').value;if(!prompt)return alert('Type what to edit');let editor=document.getElementById('codeEditor');let current=editor.value;let chat=document.getElementById('chatBox');chat.innerHTML+=`<div class="bg-[#333] p-2 rounded-xl ml-4 text-[10px]">🤖 Edit: ${prompt}</div>`;if(prompt.toLowerCase().includes('green')){editor.value=current.replace(/#22c55e/g,'#22c55e').replace(/background:#000/,'background:#052e16');}else if(prompt.toLowerCase().includes('whatsapp')){editor.value=current.replace('</body>',`<a href="https://wa.me/67577432661" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;">💬</a></body>`);}else{editor.value=current.replace('</body>',`<!-- AI Edit: ${prompt} --><div class="card">🤖 AI Added: ${prompt}</div></body>`);}document.getElementById('codePrompt').value='';runCode();chat.innerHTML+=`<div class="bg-[#222] p-2 rounded-xl text-[10px]"><b class="text-green-400">ARIA Editor:</b> Code updated! Check Preview ✅</div>`;chat.scrollTop=chat.scrollHeight;}
-function aiFixCode(){document.getElementById('codePrompt').value='Fix bugs and make it mobile responsive for PNG';aiEditCode();}
-function publishApp(){let name=document.getElementById('projName').value;let phone=document.getElementById('phone').value;if(!name||!phone)return alert('Enter name & phone');let amt=priceMap[currentPlan];let code=document.getElementById('codeEditor').value.substring(0,200);let msg=`🚀 ARIA PUBLISH ${currentPlan.toUpperCase()}!%0A💰 ${amt} PAID%0A📱 ${name}%0A📞 ${phone}%0A💡 ${currentProject.substring(0,80)}%0A%0ACode ready!`;window.open(`https://wa.me/67577432661?text=${msg}`,'_blank');alert(`✅ SENT ${amt}! Code + ${currentPlan.toUpperCase()} request sent!`);document.getElementById('payModal').classList.add('hidden');}
-</script>
-</body>
-</html>
+let pl='store',pr='K100',idea='',apps=JSON.parse(localStorage.getItem('aria_apps')||'[]');const $=id=>document.getElementById(id);
+function v(t){$('vp').classList.toggle('hidden',t!='p');$('vc').classList.toggle('hidden',t!='c');if(t=='p')$('vp').innerHTML='<iframe style="width:100%;height:100%;border:none" srcdoc="'+$('vc').value.replace(/"/g,'&quot;')+'"></iframe>';}
+function build(){idea=$('p').value;if(!idea)return;const h=`<div style="font-family:sans-serif;padding:20px;text-align:center;background:#000;color:#fff;min-height:100vh"><h1>🇵🇬 ${idea.slice(0,25)}</h1><p>${idea}</p><div style="background:#111;padding:20px;border-radius:15px;margin:20px"><h3>80/20 BSP 20%</h3><button style="background:#22c55e;color:#000;padding:12px 24px;border-radius:25px;font-weight:bold">Buy K10 - 20% to BSP 0000854484</button></div></div>`;$('vc').value=h;v('p');$('chat').innerHTML+=`<div class="bg-green-500 text-black p-1 rounded mt-1 text-[10px]">Built: ${idea}</div>`;$('p').value='';}
+function s(a,b){pl=a;pr=b;document.querySelectorAll('[id^=o-]').forEach(e=>e.className='border border-zinc-700 p-2 rounded-xl cursor-pointer text-center');$('o-'+a).className='border-2 border-green-500 bg-green-500/10 p-2 rounded-xl cursor-pointer text-center';$('pt').innerText=a.toUpperCase()+' '+b+' + 20% BSP';$('pa').innerText=b;}
+function downloadAPK(){let n=$('an').value||'ARIA-App';let blob=new Blob([$('vc').value],{type:'text/html'});let url=URL.createObjectURL(blob);let a=document.createElement('a');a.href=url;a.download=n.replace(/\s+/g,'-')+'.apk';a.click();}
+function pub(){if(!$('agree').checked)return alert('Tick AGREE 20% BSP');let n=$('an').value,ph=$('ph').value;if(!n||!ph)return alert('Enter name & phone');let app={name:n,phone:ph,plan:pl,price:pr,sales:0,my20:0,date:new Date().toLocaleDateString()};apps.push(app);localStorage.setItem('aria_apps',JSON.stringify(apps));updateDash();let msg=`🚀 K100 20% BSP SIGNED ✅ App:${n} Phone:${ph} Agree 20% to BSP 0000854484`;window.open('https://wa.me/67577432661?text='+encodeURIComponent(msg));downloadAPK();alert('✅ Added! BSP collect active!');$('m').classList.add('hidden');}
+function updateDash(){let total=apps.length,totalSales=apps.reduce((s,a)=>s+a.sales,0),myEarn=apps.reduce((s,a)=>s+a.my20,0);$('dApps').innerText=total;$('dEarn').innerText='K'+myEarn;$('dSales').innerText='K'+totalSales;$('earnBtn').innerText=`💰 K${myEarn} BSP`;let list=$('appList');if(total==0)list.innerHTML='<div class="text-gray-500 text-center py-1">No apps - Click Demo</div>';else list.innerHTML=apps.map((a,i)=>`<div class="flex justify-between bg-zinc-800 p-2 rounded"><span>${i+1}. ${a.name} K${a.sales}</span><span class="text-green-400 font-bold">You K${a.my20} BSP</span></div>`).join('');let report=`💰 ARIA_NexHub BSP AUTO-COLLECT REPORT\n📅 ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}\n👤 Joseph Aria - BSP 0000854484 Waigani 202\n\n📊 SUMMARY:\nTotal Apps: ${total}\nTotal Sales: K${totalSales}\nYOUR 20% BSP: K${myEarn}\nCreator 80%: K${totalSales-myEarn}\n\n📱 BREAKDOWN:\n${apps.map(a=>`• ${a.name}: K${a.sales} → Your 20%: K${a.my20} → Creator K${a.sales-a.my20}`).join('\n')||'No apps'}\n\n🏦 BSP COLLECTION INVOICE:\nAccount: 0000854484\nName: Joseph Aria\nBank: BSP Waigani Branch 202\nAmount Due: K${myEarn} (20% platform fee)\nDue Date: ${new Date(new Date().setDate(new Date().getDate()+7)).toLocaleDateString()}\n\n💸 Pay via BSP Mobile Banking or Branch Deposit\nReference: ARIA_20%_${new Date().toISOString().slice(0,10)}\n\n🇵🇬 ARIA_NexHub - PNG App Empire\nAuto-generated BSP collection system`; $('reportPreview').innerText=report; localStorage.setItem('aria_report',report);}
+function addSale(){let amt=parseInt($('saleInput').value)||0;if(amt<=0)return alert('Enter K');if(apps.length==0)apps.push({name:'Demo App',phone:'675',plan:'store',price:'K100',sales:0,my20:0,date:new Date().toLocaleDateString()});let last=apps[apps.length-1];last.sales+=amt;last.my20+=Math.floor(amt*0.2);localStorage.setItem('aria_apps',JSON.stringify(apps));updateDash();$('saleInput').value='';}
+function addDemo(){apps.push({name:'Buai Market '+(apps.length+1),phone:'6757',plan:'store',price:'K100',sales:150,my20:30,date:new Date().toLocaleDateString()});localStorage.setItem('aria_apps',JSON.stringify(apps));updateDash();}
+function sendReport(){let r=localStorage.getItem('aria_report')||'No data';window.open('https://wa.me/67577432661?text='+encodeURIComponent(r));}
+function collectBSP(){let r=localStorage.getItem('aria_report')||'No data';let invoice=`🏦 BSP COLLECTION INVOICE\n\n${r}\n\n---\nPay to:\nBSP: 0000854484\nJoseph Aria\nWaigani 202\n\nThis is your official 20% platform fee invoice. Please pay within 7 days via BSP Mobile or Branch.`;window.open('https://wa.me/67577432661?text='+encodeURIComponent(invoice));alert('🏦 BSP Invoice generated! Sent to WhatsApp!');}
+function sendBSPRequest(){if(apps.length==0)return alert('No apps');let totalEarn=apps.reduce((s,a)=>s+a.my20,0);let msg=`💸 BSP PAY REQUEST - 20% PLATFORM FEE\n\nDear Creator,\nYour app sales: K${apps.reduce((s,a)=>s+a.sales,0)}\nYour 20% fee due: K${totalEarn}\n\nPlease pay to:\n🏦 BSP 0000854484\n👤 Joseph Aria\n📍 Waigani 202\n\nReference: Your App Name\n\nThank you for using ARIA_NexHub! 🇵🇬\n\nBSP Mobile Banking: Transfer K${totalEarn} to 0000854484`;window.open('https://wa.me/67577000000?text='+encodeURIComponent(msg));alert('💸 BSP Pay Request template ready! Change number to creator phone!');}
+function openDash(){updateDash();$('dash').classList.remove('hidden');}
+updateDash();s('store','K100');
+</script></body></html>
