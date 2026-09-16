@@ -1,27 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>ARIA_NexHub</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARIA_NexHub - The Future of AI in PNG</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#0a0a0a;color:white;font-family:Arial;text-align:center}
-.nav{padding:20px;text-align:left;border-bottom:1px solid #222}
-.logo{color:#00ff88;font-weight:bold}
-.hero{padding:60px 20px}
-.btn{background:#00ff88;color:black;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:20px}
-.card{background:#151515;padding:20px;margin:15px;border-radius:10px;border:1px solid #222}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080808;color:#fff;font-family:'Inter',Arial,sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;background:rgba(8,8,8,.9);backdrop-filter:blur(10px);border-bottom:1px solid #222;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;z-index:99}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:22px;color:#00FF88;letter-spacing:-1px}
+.nav-btn{background:#00FF88;color:#000;padding:10px 22px;border-radius:100px;font-weight:700;text-decoration:none;font-size:14px}
+.hero{padding:140px 5% 80px;text-align:center;min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.badge{border:1px solid #333;background:#111;padding:6px 14px;border-radius:100px;font-size:12px;color:#00FF88;margin-bottom:24px;letter-spacing:1px}
+.hero h1{font-family:'Space Grotesk';font-size:clamp(36px,8vw,72px);line-height:.95;font-weight:700;max-width:800px}
+.hero h1 span{color:#00FF88}
+.hero p{color:#888;font-size:18px;max-width:520px;margin:24px auto 36px;line-height:1.6}
+.cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn-primary{background:#00FF88;color:#000;padding:16px 32px;border-radius:100px;font-weight:700;text-decoration:none;font-size:16px;display:inline-block}
+.btn-sec{border:1px solid #333;color:#fff;padding:16px 32px;border-radius:100px;font-weight:600;text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;padding:40px 5%;max-width:1200px;margin:0 auto}
+.card{background:#121212;border:1px solid #222;border-radius:20px;padding:28px;transition:.3s}
+.card:hover{border-color:#00FF88;transform:translateY(-4px)}
+.card h3{color:#00FF88;font-family:'Space Grotesk';margin-bottom:10px;font-size:20px}
+.card p{color:#aaa;font-size:14px;line-height:1.6}
+.stats{display:flex;justify-content:center;gap:40px;padding:40px 5%;border-y:1px solid #1a1a1a;margin:40px 0;flex-wrap:wrap}
+.stat h2{font-family:'Space Grotesk';font-size:40px;color:#00FF88}
+.stat p{color:#666;font-size:12px;text-transform:uppercase;letter-spacing:2px}
+footer{text-align:center;padding:60px 5%;color:#555;font-size:13px;border-top:1px solid #1a1a1a}
 </style>
 </head>
 <body>
-<div class="nav"><div class="logo">ARIA_NexHub</div></div>
+<nav><div class="logo">ARIA_NexHub</div><a class="nav-btn" href="#">Launch App</a></nav>
 <div class="hero">
-<h1>The Next Hub for<br>AI & Automation</h1>
-<p style="color:#888">Built in Port Moresby, PNG</p>
-<a class="btn" href="#">Launch App</a>
+<div class="badge">⚡ BUILT IN PORT MORESBY, PNG</div>
+<h1>The Next Hub for <span>AI & Automation</span></h1>
+<p>ARIA_NexHub brings all AI tools, automation & digital services in one fast, low-data platform built for Papua New Guinea.</p>
+<div class="cta">
+<a class="btn-primary" href="#">Launch App →</a>
+<a class="btn-sec" href="#">Watch Demo</a>
 </div>
-<div class="card"><h3 style="color:#00ff88">AI Tools</h3><p>All AI tools in one place</p></div>
-<div class="card"><h3 style="color:#00ff88">Fast</h3><p>Works on mobile and low data</p></div>
-<div class="card"><h3 style="color:#00ff88">Automation</h3><p>Automate your work</p></div>
-<p style="color:#555;margin-top:50px">© 2026 ARIA_NexHub</p>
+</div>
+<div class="stats">
+<div class="stat"><h2>10+</h2><p>AI Tools</p></div>
+<div class="stat"><h2>100%</h2><p>Low Data</p></div>
+<div class="stat"><h2>24/7</h2><p>Automation</p></div>
+</div>
+<div class="grid">
+<div class="card"><h3>🤖 AI Tools Hub</h3><p>Access ChatGPT, image generators, voice AI, and productivity tools in one dashboard optimized for PNG internet.</p></div>
+<div class="card"><h3>⚙️ Automation</h3><p>Automate your business - WhatsApp replies, Facebook posts, invoices, and customer follow-ups.</p></div>
+<div class="card"><h3>🚀 Fast & Light</h3><p>Works on low data, slow 4G, and any phone. Built for Port Moresby, Lae, and all PNG.</p></div>
+<div class="card"><h3>💼 Business Suite</h3><p>Tools for SMEs - logo maker, price calculator, CV builder, and proposal generator.</p></div>
+<div class="card"><h3>📱 Mobile First</h3><p>100% mobile optimized. No laptop needed. Run your entire digital hustle from your phone.</p></div>
+<div class="card"><h3>🇵🇬 PNG Made</h3><p>Created by Joe Aria in Port Moresby. For Papua New Guineans, by Papua New Guineans.</p></div>
+</div>
+<footer><p>© 2026 ARIA_NexHub - Built with pride in Port Moresby, PNG<br>joearia3-bit.github.io</p></footer>
 </body>
 </html>
